@@ -82,11 +82,13 @@ app.post('/addStudent', function(req, res) {
     return;
   }
   db.insert({ _id: name }, function(err, data) {
-    if (err)
+    if (err) {
       console.log("Document already exists. Error: ", err);
-    else
+      res.sendStatus(500);      
+    } else {
       console.log("Inserted new document");
-    res.sendStatus(200);
+      res.sendStatus(200);
+    }
   });
 });
 ```
