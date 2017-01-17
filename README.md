@@ -34,7 +34,7 @@ You can view your deployed application on your [dashboard](https://console.ng.bl
 
 # Implement endpoints
 
-1. Replace the existing TODO code for the two endpoints (lines 41-51) with the following -
+1. Replace the existing TODO code for the two endpoints (lines 41-53) with the following -
 
 ```
 //endpoint for retrieving all students
