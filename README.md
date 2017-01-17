@@ -6,7 +6,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 1. Install Bluemix CLI using the link [here](https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started)
 
-2. Login to Bluemix using the command - 
+2. Login to Bluemix with your username and password using the command - 
 
 `bluemix login -a https://api.ng.bluemix.net`
 
@@ -32,7 +32,7 @@ applications:
 
 1. Add the following code to the bottom of app.js - 
 
-`
+```
 var bodyParser = require('body-parser');
 
 const DATABASE_ERROR = 'Database undefined';
@@ -85,7 +85,7 @@ app.post('/addStudent', function(req, res) {
     res.sendStatus(200);
   });
 });
-`
+```
 
 2. Run `cf push`
 
@@ -101,7 +101,7 @@ app.post('/addStudent', function(req, res) {
 
 1. Add the following code to the bottom of app.js - 
 
-`
+```
 var Cloudant = require('cloudant');
 
 var cloudant_url;
@@ -130,4 +130,4 @@ else {
     	db = cloudant.db.use(dbname);
   });
 }
-`
+```
