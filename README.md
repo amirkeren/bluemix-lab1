@@ -13,7 +13,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 # Deploy the app on Bluemix
 
 1. Login to [Jazz Hub](hub.jazz.net) and click Create
-1. Fork this repository
+1. Fork this repository (to clone it run `git clone https://your_alias:your_IBM_ID_password@hub.jazz.net/git/alias/project_name`)
 2. Run `cf push <APP_NAME>` or create a new file named manifest.yml with the following content - 
 
 ```
