@@ -1,0 +1,133 @@
+# Node.js and Cloudant Starter Overview
+
+The Node.js Starter demonstrates a simple, reusable Node.js web application that works with Cloudant NoSQL DB.
+
+# Preparation
+
+1. Install Bluemix CLI using the link [here](https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started)
+
+2. Login to Bluemix using the command - 
+
+`bluemix login -a https://api.ng.bluemix.net`
+
+3. Install the CloudFoundry CLI using the link [here](https://github.com/cloudfoundry/cli/releases)
+
+# Deploy the app on Bluemix
+
+1. Fork the repository
+2. Create a new file named manifest.yml with the following content - 
+
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: <your_app_name_here>
+  host: <your_app_name_here>
+  disk_quota: 1024M
+
+3. Run `cf push`
+
+# Add endpoints
+
+1. Add the following code to the bottom of app.js - 
+
+`
+var bodyParser = require('body-parser');
+
+const DATABASE_ERROR = 'Database undefined';
+const PARAMETER_ERROR = 'Parameter is missing';
+
+//for parsing request parameters
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+//endpoint for retrieving all students
+app.get('/getStudents', function(req, res) {
+  var result = 'No Students Found';
+  if (db == null) {
+    console.log(DATABASE_ERROR);
+    res.send(result);
+    return;
+  }
+  db.list({ include_docs: true }, function(err, data) {
+    if (err) {
+      console.log("Error: ", err);
+    } else {
+      result = '';
+      for (var i = 0; i < data.total_rows; i++) {
+        result += '<li>' + data.rows[i].id + '</li>';
+      }
+    }
+    res.send(result);
+  });
+});
+
+//endpoint for adding a new student
+app.post('/addStudent', function(req, res) {
+  if (db == null) {
+    console.log(DATABASE_ERROR);
+    res.sendStatus(500);
+    return;
+  }
+  var name = req.body.name;
+  if (name == null) {
+    console.log(PARAMETER_ERROR);
+    res.sendStatus(500);
+    return;
+  }
+  db.insert({ _id: name }, function(err, data) {
+    if (err)
+      console.log("Document already exists. Error: ", err);
+    else
+      console.log("Inserted new document");
+    res.sendStatus(200);
+  });
+});
+`
+
+2. Run `cf push`
+
+# Add Cloudant NoSQL DB service to the application
+
+1. Go to the creation page of the Cloudant NoSQL DB service using [this](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db/) link or search for "Cloudant" in the Bluemix catalog
+
+2. Before creating the service *bind* it to the app you created in the previous step
+
+3. Continue to restage the app
+
+# Add adapter methods
+
+1. Add the following code to the bottom of app.js - 
+
+`
+var Cloudant = require('cloudant');
+
+var cloudant_url;
+//check if services are bound to your project
+if (process.env.VCAP_SERVICES) {
+	var services = JSON.parse(process.env.VCAP_SERVICES);
+  //check if CloudantNoSQLDB service is bound to your project
+	if (services.cloudantNoSQLDB)
+		cloudant_url = services.cloudantNoSQLDB[0].credentials.url;
+}
+
+//check that we have a valid Cloudant url
+if (cloudant_url == null)
+  console.log(DATABASE_ERROR);
+else {
+  //connect using cloudant npm and URL obtained from previous step
+  var cloudant = Cloudant({ url: cloudant_url });
+  var dbname = 'students';
+  var db;
+  //create database
+  cloudant.db.create(dbname, function(err, data) {
+    	if (err)
+  	    console.log("Database already exists. Error: ", err);
+    	else
+  	    console.log("Created database");
+    	db = cloudant.db.use(dbname);
+  });
+}
+`
