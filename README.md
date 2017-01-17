@@ -15,18 +15,18 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 # Deploy the app on Bluemix
 
 1. Fork the repository
-2. Create a new file named manifest.yml with the following content - 
+2. Run `cf push <APP_NAME>` or create a new file named manifest.yml with the following content - 
 
 applications:
 - path: .
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: <your_app_name_here>
-  host: <your_app_name_here>
+  name: <APP_NAME>
+  host: <APP_NAME>
   disk_quota: 1024M
 
-3. Run `cf push`
+And then run `cf push`
 
 # Add endpoints
 
