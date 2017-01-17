@@ -15,7 +15,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 # Deploy the app on Bluemix
 
 1. Login to [Jazz Hub](hub.jazz.net) and click Create
-1. Fork the repository
+1. Fork this repository
 2. Run `cf push <APP_NAME>` or create a new file named manifest.yml with the following content - 
 
 ```
@@ -30,6 +30,7 @@ applications:
 ```
 
 And then run `cf push`
+Note that <APP_NAME>.mybluemix.net must be *unique*
 
 # Add endpoints
 
@@ -96,9 +97,9 @@ app.post('/addStudent', function(req, res) {
 
 1. Go to the creation page of the Cloudant NoSQL DB service using [this](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db/) link or search for "Cloudant" in the Bluemix catalog
 
-2. Before creating the service *bind* it to the app you created in the previous step
+2. Before creating the service *bind* it to the application you created in the previous step
 
-3. Continue to restage the app
+3. Restage the application when prompt to do so
 
 # Add adapter methods
 
