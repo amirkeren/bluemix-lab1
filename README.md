@@ -4,7 +4,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 # Preparation
 
-1. Install Bluemix CLI using the link [here](https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started)
+1. Install Bluemix CLI using the link [here](http://clis.ng.bluemix.net/ui/home.html)
 
 2. Login to Bluemix with your username and password using the command - 
 
@@ -14,6 +14,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 # Deploy the app on Bluemix
 
+1. Login to [Jazz Hub](hub.jazz.net) and click Create
 1. Fork the repository
 2. Run `cf push <APP_NAME>` or create a new file named manifest.yml with the following content - 
 
