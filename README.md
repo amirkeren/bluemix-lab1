@@ -104,7 +104,7 @@ To view the live application log run `cf logs <APP_NAME>`
 
 2. Before creating the service *bind* it to the application you created in the previous step
 
-3. Restage the application when prompt to do so
+3. Restage the application if prompt to do so
 
 # Add adapter methods
 
