@@ -96,7 +96,7 @@ app.post('/addStudent', function(req, res) {
 And run `cf push`
 
 Wait for the application to redeploy and then try to add a new student. 
-To view the application logs either go to the logs section of your application management page or run `cf logs <APP_NAME>`
+To view the live application log run `cf logs <APP_NAME>`
 
 # Add Cloudant NoSQL DB service to the application
 
