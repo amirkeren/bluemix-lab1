@@ -42,7 +42,7 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 app.get('/getStudents', function(req, res) {
   //TODO - implement and remove the line below
   console.log('Endpoint not implemented yet');
-  res.send(''); //temporary return value
+  res.send('No Students Found'); //temporary return value
 });
 
 //endpoint for adding a new student
