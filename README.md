@@ -32,23 +32,11 @@ Note that <APP_NAME>.mybluemix.net must be *unique* (so it is best to use your f
 
 You can view your deployed application on your [dashboard](https://console.ng.bluemix.net/dashboard/apps)
 
-# Add endpoints
+# Implement endpoints
 
-1. Add the following code to the bottom of app.js - 
+1. Replace the existing TODO code for the two endpoints (lines 41-51) with the following -
 
 ```
-var bodyParser = require('body-parser');
-
-var db;
-
-const DATABASE_ERROR = 'Database undefined';
-const PARAMETER_ERROR = 'Parameter is missing';
-
-//for parsing request parameters
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
 //endpoint for retrieving all students
 app.get('/getStudents', function(req, res) {
   var result = 'No Students Found';
