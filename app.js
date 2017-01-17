@@ -7,7 +7,7 @@
 const DATABASE_ERROR = 'Database undefined';
 const PARAMETER_ERROR = 'Parameter is missing';
 
-// This application uses express as its web server
+// this application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
 
@@ -24,7 +24,7 @@ var app = express();
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
-//for parsing request parameters
+// for parsing request parameters
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -38,16 +38,19 @@ app.listen(appEnv.port, '0.0.0.0', function() {
   console.log("server starting on " + appEnv.url);
 });
 
-//endpoint for retrieving all students
+// will hold the database object
+var db;
+
+// endpoint for retrieving all students
 app.get('/getStudents', function(req, res) {
-  //TODO - implement and remove the line below
+  // TODO - implement and remove the line below
   console.log('Endpoint not implemented yet');
-  res.send('No Students Found'); //temporary return value
+  res.send('No Students Found'); // temporary return value
 });
 
-//endpoint for adding a new student
+// endpoint for adding a new student
 app.post('/addStudent', function(req, res) {
-  //TODO - implement and remove the line below
+  // TODO - implement and remove the line below
   console.log('Endpoint not implemented yet');
-  res.sendStatus(500); //temporary return value
+  res.sendStatus(500); // temporary return value
 });
