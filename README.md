@@ -39,6 +39,8 @@ You can view your deployed application on your [dashboard](https://console.ng.bl
 ```
 var bodyParser = require('body-parser');
 
+var db;
+
 const DATABASE_ERROR = 'Database undefined';
 const PARAMETER_ERROR = 'Parameter is missing';
 
@@ -129,7 +131,6 @@ else {
   //connect using cloudant npm and URL obtained from previous step
   var cloudant = Cloudant({ url: cloudant_url });
   var dbname = 'students';
-  var db;
   //create database
   cloudant.db.create(dbname, function(err, data) {
     	if (err)
