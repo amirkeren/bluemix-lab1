@@ -20,7 +20,7 @@
 
     function addStudent() {
       var student = $('#name').val();
-      if (students) {
+      if (student) {
         $.post('/addStudent', { name: student })
           .done(function(data) {
             getStudents();
