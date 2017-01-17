@@ -28,7 +28,7 @@ applications:
 ```
 
 And then run `cf push`
-Note that <APP_NAME>.mybluemix.net must be *unique*
+Note that <APP_NAME>.mybluemix.net must be *unique* (so it is best to use your fullname-lab1 for example)
 
 You can view your deployed application on your [dashboard](https://console.ng.bluemix.net/dashboard/apps)
 
