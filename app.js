@@ -40,12 +40,12 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 //endpoint for retrieving all students
 app.get('/getStudents', function(req, res) {
-  //TODO - implement
-  res.sendStatus(500);
+  //TODO - implement and remove the line below
+  res.sendStatus(500); //temporary return value
 });
 
 //endpoint for adding a new student
 app.post('/addStudent', function(req, res) {
-  //TODO - implement
-  res.sendStatus(500);
+  //TODO - implement and remove the line below
+  res.sendStatus(500); //temporary return value
 });
