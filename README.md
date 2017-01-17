@@ -6,11 +6,11 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 1. Install Bluemix CLI using the link [here](http://clis.ng.bluemix.net/ui/home.html)
 
-2. Login to Bluemix with your username and password using the command - 
+2. Install the CloudFoundry CLI using the link [here](https://github.com/cloudfoundry/cli/releases)
+
+3. Login to Bluemix with your username and password using the command - 
 
 `bluemix login -a https://api.ng.bluemix.net`
-
-3. Install the CloudFoundry CLI using the link [here](https://github.com/cloudfoundry/cli/releases)
 
 # Deploy the app on Bluemix
 
