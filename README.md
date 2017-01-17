@@ -32,6 +32,8 @@ applications:
 And then run `cf push`
 Note that <APP_NAME>.mybluemix.net must be *unique*
 
+You can view your deployed application on your [dashboard](https://console.ng.bluemix.net/dashboard/apps)
+
 # Add endpoints
 
 1. Add the following code to the bottom of app.js - 
@@ -91,7 +93,10 @@ app.post('/addStudent', function(req, res) {
 });
 ```
 
-2. Run `cf push`
+And run `cf push`
+
+Wait for the application to redeploy and then try to add a new student
+To view the application logs either go to the logs section of your application management page or run `cf logs <APP_NAME>`
 
 # Add Cloudant NoSQL DB service to the application
 
@@ -135,3 +140,5 @@ else {
   });
 }
 ```
+
+And run `cf push`
