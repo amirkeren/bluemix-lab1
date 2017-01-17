@@ -12,8 +12,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 # Deploy the app on Bluemix
 
-1. Login to [Jazz Hub](hub.jazz.net) and click Create
-2. Clone this repository or download it as a Zip file
+1. Clone this repository or download it as a Zip file
 2. Create a new file named manifest.yml with the following content - 
 
 ```
