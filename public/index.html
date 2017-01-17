@@ -26,7 +26,7 @@
             getStudents();
           })
           .fail(function(xhr, status, error) {
-            alert('Failed to add student');
+            alert('Failed to add student, is DB connected? Check log for more information');
           });
       } else
         alert('Please enter student name');
