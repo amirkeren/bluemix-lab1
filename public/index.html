@@ -20,7 +20,7 @@
 
     function addStudent() {
       var student = $('#name').val();
-      if (students) { 
+      if (students) {
         $.post('/addStudent', { name: student })
           .done(function(data) {
             getStudents();
@@ -28,9 +28,8 @@
           .fail(function(xhr, status, error) {
             alert('Failed to add student');
           });
-      } else {
-        alert('Please enter student name");
-      }
+      } else
+        alert('Please enter student name');
     }
   </script>
 </html>
