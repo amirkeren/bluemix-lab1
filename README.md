@@ -8,9 +8,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 2. Install the CloudFoundry CLI using the link [here](https://github.com/cloudfoundry/cli/releases)
 
-3. Login to Bluemix with your username and password using the command - 
-
-`bluemix login -a https://api.ng.bluemix.net`
+3. Login to Bluemix with your username and password using the command - `bluemix login -a https://api.ng.bluemix.net`
 
 # Deploy the app on Bluemix
 
@@ -95,7 +93,7 @@ app.post('/addStudent', function(req, res) {
 
 And run `cf push`
 
-Wait for the application to redeploy and then try to add a new student
+Wait for the application to redeploy and then try to add a new student. 
 To view the application logs either go to the logs section of your application management page or run `cf logs <APP_NAME>`
 
 # Add Cloudant NoSQL DB service to the application
@@ -142,3 +140,5 @@ else {
 ```
 
 And run `cf push`
+
+Wait for the application to redeploy and then try to add a new student
