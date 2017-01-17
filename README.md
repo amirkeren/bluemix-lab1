@@ -96,7 +96,7 @@ app.post('/addStudent', function(req, res) {
 And run `cf push`
 
 Wait for the application to redeploy and then try to add a new student. 
-To view the live application log go to the Logs section of the application management on the Bluemix console or simply run `cf logs <APP_NAME>`
+To view the live application log simply run `cf logs <APP_NAME>`
 
 # Add Cloudant NoSQL DB service to the application
 
