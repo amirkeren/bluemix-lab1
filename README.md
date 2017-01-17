@@ -17,6 +17,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 1. Fork the repository
 2. Run `cf push <APP_NAME>` or create a new file named manifest.yml with the following content - 
 
+```
 applications:
 - path: .
   memory: 256M
@@ -25,6 +26,7 @@ applications:
   name: <APP_NAME>
   host: <APP_NAME>
   disk_quota: 1024M
+```
 
 And then run `cf push`
 
