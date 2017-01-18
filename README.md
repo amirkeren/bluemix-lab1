@@ -29,7 +29,7 @@ applications:
   disk_quota: 1024M
 ```
 
-And then run `cf push`. _Note that <APP_NAME>.mybluemix.net must be_ *unique* (so it is best to use your fullname-lab1 for example)
+And then run `cf push`. _Note that <APP_NAME>.mybluemix.net must be_ **unique** (so it is best to use your fullname-lab1 for example)
 
 You can view your deployed application on your [dashboard](https://console.ng.bluemix.net/dashboard/apps)
 
