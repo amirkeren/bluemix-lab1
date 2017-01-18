@@ -13,7 +13,9 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 # Deploy the app on Bluemix
 
 1. Clone this repository or by running `git clone https://github.com/amirkeren/bluemix-lab1.git` (if you have git installed) or download it as a zip file from [here](https://github.com/amirkeren/bluemix-lab1/archive/master.zip)
+
 2. Navigate to the cloned project folder (extract the file first if you downloaded the zip file)
+
 3. Create a new file named manifest.yml in the root folder of the project with the following content - 
 
 ```
