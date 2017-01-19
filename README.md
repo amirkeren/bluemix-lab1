@@ -109,10 +109,10 @@ var Cloudant = require('cloudant');
 var cloudant_url;
 //check if services are bound to your project
 if (process.env.VCAP_SERVICES) {
-	var services = JSON.parse(process.env.VCAP_SERVICES);
+    var services = JSON.parse(process.env.VCAP_SERVICES);
   //check if CloudantNoSQLDB service is bound to your project
-	if (services.cloudantNoSQLDB)
-		cloudant_url = services.cloudantNoSQLDB[0].credentials.url;
+    if (services.cloudantNoSQLDB)
+        cloudant_url = services.cloudantNoSQLDB[0].credentials.url;
 }
 
 //check that we have a valid Cloudant url
@@ -121,14 +121,20 @@ if (cloudant_url == null)
 else {
   //connect using cloudant npm and URL obtained from previous step
   var cloudant = Cloudant({ url: cloudant_url });
+  //create databases
+  cloudant.db.create('translations', function(err, data) {
+        if (err)
+          console.log("Database already exists. Error: ", err);
+        else
+          console.log("Created database");
+  });
   var dbname = 'phrases';
-  //create database
   cloudant.db.create(dbname, function(err, data) {
-    	if (err)
-  	    console.log("Database already exists. Error: ", err);
-    	else
-  	    console.log("Created database");
-    	db = cloudant.db.use(dbname);
+        if (err)
+          console.log("Database already exists. Error: ", err);
+        else
+          console.log("Created database");
+        db = cloudant.db.use(dbname);
   });
 }
 ```
