@@ -41,15 +41,15 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 // will hold the database object
 var db;
 
-// endpoint for retrieving all students
-app.get('/getStudents', function(req, res) {
+// endpoint for retrieving all phrases
+app.get('/getPhrases', function(req, res) {
   // TODO - implement and remove the line below
   console.log('Endpoint not implemented yet');
-  res.send('No Students Found'); // temporary return value
+  res.send('No Phrases Found'); // temporary return value
 });
 
-// endpoint for adding a new student
-app.post('/addStudent', function(req, res) {
+// endpoint for adding a new phrase
+app.post('/addPhrase', function(req, res) {
   // TODO - implement and remove the line below
   console.log('Endpoint not implemented yet');
   res.sendStatus(500); // temporary return value
