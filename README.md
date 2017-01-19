@@ -37,7 +37,7 @@ You can view your deployed application on your [dashboard](https://console.ng.bl
 
 # Implementing endpoints
 
-1. Edit the file *app.js* and replace the existing TODO code for the two endpoints (lines _44-56_) with the following -
+1. Edit the file *app.js* and replace the existing TODO code for the two endpoints (lines **44-56**) with the following -
 
 ```
 //endpoint for retrieving all phrases
