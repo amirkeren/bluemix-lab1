@@ -127,14 +127,14 @@ else {
         if (err)
           console.log("Database " + dbname + " already exists");
         else
-          console.log('Created database');
+          console.log("Created database " + dbname);
   });
   dbname = 'phrases';
   cloudant.db.create(dbname, function(err, data) {
         if (err)
           console.log("Database " + dbname + " already exists");
         else
-          console.log('Created database');
+          console.log("Created database " + dbname);
         db = cloudant.db.use(dbname);
   });
 }
