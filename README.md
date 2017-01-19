@@ -101,7 +101,7 @@ To view the live application log simply run `cf logs <APP_NAME>`
 
 # Adding adapter methods
 
-1. Add the following code to the bottom of app.js - 
+1. Add the following code to the bottom of the file *app.js* - 
 
 ```
 var Cloudant = require('cloudant');
