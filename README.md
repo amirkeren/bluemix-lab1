@@ -89,7 +89,7 @@ app.post('/addPhrase', function(req, res) {
 And run `cf push`
 
 Wait for the application to redeploy and then try to add a new phrase (which will **fail**). 
-To view the live application log simply run `cf logs <APP_NAME>`
+To find out why, check the live application log by running `cf logs <APP_NAME>`
 
 # Adding Cloudant NoSQL DB service to the application
 
