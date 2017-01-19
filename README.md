@@ -12,7 +12,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 4. Login to Bluemix with your username and password by running `bluemix login -a https://api.ng.bluemix.net` in the command prompt
 
-# Deploy the app on Bluemix
+# Deploying the app on Bluemix
 
 1. Clone this repository by running `git clone https://github.com/amirkeren/bluemix-lab1.git` (if you have [git](https://git-scm.com/downloads) installed) or download it as a zip file from [here](https://github.com/amirkeren/bluemix-lab1/archive/master.zip)
 
@@ -35,7 +35,7 @@ And then run `cf push`. _Note that APP_NAME.mybluemix.net must be_ **unique** (s
 
 You can view your deployed application on your [dashboard](https://console.ng.bluemix.net/dashboard/apps). If the application fails to start, try renaming the application and run `cf push` again
 
-# Implement endpoints
+# Implementing endpoints
 
 1. Replace the existing TODO code for the two endpoints (lines 44-56) with the following -
 
@@ -91,7 +91,7 @@ And run `cf push`
 Wait for the application to redeploy and then try to add a new phrase. 
 To view the live application log simply run `cf logs <APP_NAME>`
 
-# Add Cloudant NoSQL DB service to the application
+# Adding Cloudant NoSQL DB service to the application
 
 1. Go to the creation page of the Cloudant NoSQL DB service using [this](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db/) link or search for "Cloudant" in the Bluemix catalog
 
@@ -99,7 +99,7 @@ To view the live application log simply run `cf logs <APP_NAME>`
 
 3. Restage the application if prompt to do so
 
-# Add adapter methods
+# Adding adapter methods
 
 1. Add the following code to the bottom of app.js - 
 
