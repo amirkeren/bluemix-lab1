@@ -40,9 +40,9 @@ You can view your deployed application on your [dashboard](https://console.ng.bl
 1. Replace the existing TODO code for the two endpoints (lines 44-56) with the following -
 
 ```
-//endpoint for retrieving all students
-app.get('/getStudents', function(req, res) {
-  var result = 'No Students Found';
+//endpoint for retrieving all phrases
+app.get('/getPhrases', function(req, res) {
+  var result = 'No Phrases Found';
   if (db == null) {
     console.log(DATABASE_ERROR);
     res.send(result);
@@ -61,20 +61,20 @@ app.get('/getStudents', function(req, res) {
   });
 });
 
-//endpoint for adding a new student
-app.post('/addStudent', function(req, res) {
+//endpoint for adding a new phrase
+app.post('/addPhrase', function(req, res) {
   if (db == null) {
     console.log(DATABASE_ERROR);
     res.sendStatus(500);
     return;
   }
-  var name = req.body.name;
-  if (name == null) {
+  var value = req.body.value;
+  if (value == null) {
     console.log(PARAMETER_ERROR);
     res.sendStatus(500);
     return;
   }
-  db.insert({ _id: name }, function(err, data) {
+  db.insert({ _id: value }, function(err, data) {
     if (err) {
       console.log("Document already exists. Error: ", err);
       res.sendStatus(500);      
@@ -88,7 +88,7 @@ app.post('/addStudent', function(req, res) {
 
 And run `cf push`
 
-Wait for the application to redeploy and then try to add a new student. 
+Wait for the application to redeploy and then try to add a new phrase. 
 To view the live application log simply run `cf logs <APP_NAME>`
 
 # Add Cloudant NoSQL DB service to the application
@@ -121,7 +121,7 @@ if (cloudant_url == null)
 else {
   //connect using cloudant npm and URL obtained from previous step
   var cloudant = Cloudant({ url: cloudant_url });
-  var dbname = 'students';
+  var dbname = 'phrases';
   //create database
   cloudant.db.create(dbname, function(err, data) {
     	if (err)
@@ -135,4 +135,4 @@ else {
 
 And run `cf push`
 
-Wait for the application to redeploy and then try to add a new student
+Wait for the application to redeploy and then try to add a new phrase
