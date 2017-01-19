@@ -95,7 +95,7 @@ To view the live application log simply run `cf logs <APP_NAME>`
 
 1. Go to the creation page of the Cloudant NoSQL DB service using [this](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db/) link or search for "cloudant" in the Bluemix catalog
 
-2. Before creating the service *bind* it to the application you created in the previous step
+2. Before creating the service make sure it is *bound* to the application you created in the previous step (do this by verifying that the drop-down box on the left has your application name selected)
 
 3. Restage the application if prompt to do so
 
