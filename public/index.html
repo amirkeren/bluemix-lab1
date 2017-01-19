@@ -3,33 +3,33 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   </head>
-  <body onload="getStudents();">
-    <h1>Registered Students:</h1>
-    <ul id="students">
+  <body onload="getPhrases();">
+    <h1>Available English Phrases:</h1>
+    <ul id="phrases">
     </ul>
-    <h2>Add A New Student</h2>
-    <input type="text" placeholder="Student name" id="name"/>
-    <button type="button" onclick="addStudent();">Add Student</button>
+    <h2>Add A New English Phrase</h2>
+    <input type="text" placeholder="New English phrase here" id="phrase"/>
+    <button type="button" onclick="addPhrase();">Add Phrase</button>
   </body>
   <script>
-    function getStudents() {
-      $.get('/getStudents', function(data) {
-        $('#students').html(data);
+    function getPhrases() {
+      $.get('/getPhrases', function(data) {
+        $('#phrases').html(data);
       });
     }
 
-    function addStudent() {
-      var student = $('#name').val();
-      if (student) {
-        $.post('/addStudent', { name: student })
+    function addPhrase() {
+      var phrase = $('#phrase').val();
+      if (phrase) {
+        $.post('/addPhrase', { value: phrase })
           .done(function(data) {
-            getStudents();
+            getPhrases();
           })
           .fail(function(xhr, status, error) {
-            alert('Failed to add student, is endpoint implemented? is DB connected? Check log for more information');
+            alert('Failed to add phrase, is endpoint implemented? is DB connected? Check log for more information');
           });
       } else
-        alert('Please enter student name');
+        alert('Please enter a phrase in English');
     }
   </script>
 </html>
