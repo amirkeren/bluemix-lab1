@@ -12,7 +12,7 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 4. Login to Bluemix with your username and password by running `bluemix login -a https://api.ng.bluemix.net` in the command prompt
 
-# Deploying the app on Bluemix
+# Deploying the application on Bluemix
 
 1. Clone this repository by running `git clone https://github.com/amirkeren/bluemix-lab1.git` (if you have [git](https://git-scm.com/downloads) installed) or download it as a zip file from [here](https://github.com/amirkeren/bluemix-lab1/archive/master.zip)
 
