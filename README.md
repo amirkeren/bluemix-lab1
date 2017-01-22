@@ -4,11 +4,11 @@ The Node.js Starter demonstrates a simple, reusable Node.js web application that
 
 # Table of contents
 1. [Preparation](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
-2. [Deploying the application on Bluemix](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
-3. [Implementing endpoints](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
-4. [Adding Cloudant NoSQL DB service to the application](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
-5. [Adding adapter methods](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
-6. [Testing the web application](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+2. [Deploying the application on Bluemix](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#deploying-the-application-on-bluemix)
+3. [Implementing endpoints](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#implementing-endpoints)
+4. [Adding Cloudant NoSQL DB service to the application](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#adding-cloudant-nosql-db-service-to-the-application)
+5. [Adding adapter methods](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#adding-adapter-methods)
+6. [Testing the web application](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#testing-the-web-application)
 
 # Preparation
 
