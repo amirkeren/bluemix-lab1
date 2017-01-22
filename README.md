@@ -1,6 +1,6 @@
 # Node.js and Cloudant Starter Overview
 
-The Node.js Starter demonstrates a simple, reusable Node.js web application that works with Cloudant NoSQL DB.
+The Node.js Starter demonstrates a simple, reusable Node.js web application that works with Cloudant NoSQL DB
 
 # Preparation
 
