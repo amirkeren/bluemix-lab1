@@ -2,6 +2,14 @@
 
 The Node.js Starter demonstrates a simple, reusable Node.js web application that works with Cloudant NoSQL DB
 
+# Table of contents
+1. [Preparation](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+2. [Deploying the application on Bluemix](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+3. [Implementing endpoints](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+4. [Adding Cloudant NoSQL DB service to the application](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+5. [Adding adapter methods](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+6. [Testing the web application](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
+
 # Preparation
 
 1. [Register](https://console.ng.bluemix.net/registration) for a Bluemix account if you have not done so already
@@ -142,4 +150,6 @@ else {
 
 And run `cf push`
 
-Wait for the application to redeploy and then try to add a new phrase
+# Testing the web application
+
+1. Wait for the application to redeploy and then try to add a new phrase
