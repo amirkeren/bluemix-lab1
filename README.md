@@ -103,6 +103,8 @@ To find out why, check the live application log by running `cf logs <APP_NAME>`
 
 # Adding Cloudant NoSQL DB service to the application
 
+We will now provision a new instance of Cloudant NoSQL DB to be used as the database for our web application
+
 1. Go to the creation page of the Cloudant NoSQL DB service using [this](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db/) link or search for "cloudant" in the Bluemix catalog
 
 2. Before creating the service make sure it is *bound* to the application you created in the previous step (do this by verifying that the drop-down box on the left under "Connect to:" has your application name selected)
@@ -110,6 +112,8 @@ To find out why, check the live application log by running `cf logs <APP_NAME>`
 3. Restage the application if prompt to do so
 
 # Adding adapter methods
+
+We will now add the methods responsible for reading and writing to the Cloudant DB
 
 1. Add the following code to the bottom of the file *app.js* - 
 
