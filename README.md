@@ -26,7 +26,7 @@ The CloudFoundry Starter demonstrates a simple, reusable Node.js web application
 
 2. Navigate to the cloned project folder (extract the file first if you downloaded the zip file)
 
-3. Create a new file named manifest.yml in the root folder of the project with the following content - 
+3. Create a new file named manifest.yml in the root folder of the project with the following content (replace *APP_NAME* with the name you want to give your web application) - 
 
 ```
 applications:
