@@ -45,6 +45,8 @@ You can view your deployed application on your [dashboard](https://console.ng.bl
 
 # Implementing endpoints
 
+We will now add the relevant code to implement the endpoints of the web application responsible for retrieving the available phrases in the dictionary and adding new ones
+
 1. Edit the file *app.js* and replace the existing TODO code for the two endpoints (lines **44-56**) with the following -
 
 ```
