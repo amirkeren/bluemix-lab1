@@ -14,7 +14,7 @@ The CloudFoundry Starter demonstrates a simple, reusable Node.js web application
 
 1. [Register](https://console.ng.bluemix.net/registration) for a Bluemix account if you have not done so already
 
-2. Install the Bluemix CLI using the link [here](http://clis.ng.bluemix.net/ui/home.html) - verify that it's working by running `bluemix -v` in the command prompt, this should diplay the CLI version (if not working, make sure to add the bluemix executable to the PATH, instructions on how to do so can be found here for [windows](http://www.computerhope.com/issues/ch000549.htm), [linux](http://www.troubleshooters.com/linux/prepostpath.htm) or [mac](http://architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.WH9RLbZ96L8))
+2. Install the Bluemix CLI using the link [here](http://clis.ng.bluemix.net/ui/home.html) - verify that it's working by running `bluemix -v` in the command prompt, this should diplay the CLI version (if not working, make sure to add the bluemix executable to the PATH, instructions on how to do so can be found here for [Windows](http://www.computerhope.com/issues/ch000549.htm), [Linux](http://www.troubleshooters.com/linux/prepostpath.htm) or [Mac](http://architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/#.WH9RLbZ96L8))
 
 3. Install the CloudFoundry CLI using the link [here](https://github.com/cloudfoundry/cli/releases) - verify that it's working by running `cf -v` in the command prompt, this should diplay the CLI version (if not working, see above for how to add to PATH)
 
