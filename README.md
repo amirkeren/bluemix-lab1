@@ -1,6 +1,6 @@
 # CloudFoundry and Cloudant Starter Overview
 
-The CloudFoundry Starter demonstrates a simple, reusable Node.js web application that works with Cloudant NoSQL DB
+The CloudFoundry Starter demonstrates a simple, reusable Node.js web application that works with Cloudant NoSQL DB. The goal is to create a working UI that allows the insertion of documents into a Cloudant DB
 
 # Table of contents
 1. [Preparation](https://github.com/amirkeren/bluemix-lab1/blob/master/README.md#preparation)
